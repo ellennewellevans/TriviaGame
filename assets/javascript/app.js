@@ -46,8 +46,8 @@ let questions = [
 
 const lastQuestion = questions.length - 1;
 let runningQuestion = 0;
-let count = 0;
-const questionTime = 10; // 10s
+let count = 10;
+const questionTime = 0; // 10s
 const gaugeWidth = 150; // 150px
 const gaugeUnit = gaugeWidth / questionTime;
 let TIMER;
@@ -87,12 +87,12 @@ function renderProgress(){
 // counter render
 
 function renderCounter(){
-    if (count <= questionTime){
+    if (count >= questionTime){
         counter.innerHTML = count;
         timeGauge.style.width = count * gaugeUnit + "px";
-        count++;
+        count--;
     } else {
-        count = 0;
+        count = 10;
         // change progress color to red
         answerIsWrong();
         if(runningQuestion < lastQuestion){
