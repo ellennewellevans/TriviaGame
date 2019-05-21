@@ -59,4 +59,12 @@ p {
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#question {
+    text-align: center;
 }

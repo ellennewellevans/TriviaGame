@@ -14,25 +14,26 @@ const scoreDiv = document.getElementById("scoreContainer");
 
 // create our questions
 let questions = [
-    {
-        question : "According to C.S. Lewis, it was bordered on the east by the Eastern Ocean and on the north by the River Shribble.",
+    {   question : "According to C.S. Lewis, it was bordered on the east by the Eastern Ocean and on the north by the River Shribble.",
         imgSrc : "assets/images/Narnia_Lightpost.jpg",
         choiceA : "Narnia",
         choiceB : "The North Pole",
         choiceC : "Atlantis",
         choiceD : "Chipolte",
         correct : "A"
-    },{
-        question : "Similar to sarcastic, it's an adjective meaning disdainful or ironically mocking.",
-        imgSrc : "",
+    },
+
+    {   question : "Similar to sarcastic, it's an adjective meaning disdainful or ironically mocking.",
+        imgSrc : "assets/images/sardonic.jpg",
         choiceA : "Sadistic",
         choiceB : "Sardonic",
         choiceC : "Sarcophaguses",
         choiceD : "Scaroplasm",
         correct : "B"
-    },{
-        question : "Based on almonds, not tomatoes, ajo blanco is a white version of this chilled soup.",
-        imgSrc : "",
+    },
+
+    {   question : "Based on almonds, not tomatoes, ajo blanco is a white version of this chilled soup.",
+        imgSrc : "assets/images/gazpacho.jpg",
         choiceA : "Cucumber",
         choiceB : "Carrot",
         choiceC : "Gazpacho",
@@ -89,12 +90,12 @@ function renderCounter(){
     if (count <= questionTime){
         counter.innerHTML = count;
         timeGauge.style.width = count * gaugeUnit + "px";
-        count++
+        count++;
     } else {
         count = 0;
         // change progress color to red
         answerIsWrong();
-        if (runningQuestion < lastQuestion){
+        if(runningQuestion < lastQuestion){
             runningQuestion++;
             renderQuestion();
         } else {
@@ -104,8 +105,6 @@ function renderCounter(){
         }
     }
 }
-
-// checkAnwer
 
 function checkAnswer(answer){
     if( answer == questions[runningQuestion].correct){
@@ -129,14 +128,12 @@ function checkAnswer(answer){
     }
 }
 
-// answer is correct
 function answerIsCorrect(){
-    document.getElementById(runningQuestion).style.backgroundColor = "#0f0";
+    $("#question").text("Correct! The answer was ")
 }
 
-// answer is Wrong
 function answerIsWrong(){
-    document.getElementById(runningQuestion).style.backgroundColor = "#f00";
+    $("#question").text("Wrong! The answer was ")
 }
 
 // score render
@@ -144,15 +141,6 @@ function scoreRender(){
     scoreDiv.style.display = "block";
     
     // calculate the amount of question percent answered by the user
-    const scorePerCent = Math.round(100 * score/questions.length);
-    
-    // choose the image based on the scorePerCent
-    let img = (scorePerCent >= 80) ? "img/5.png" :
-              (scorePerCent >= 60) ? "img/4.png" :
-              (scorePerCent >= 40) ? "img/3.png" :
-              (scorePerCent >= 20) ? "img/2.png" :
-              "img/1.png";
-    
-    scoreDiv.innerHTML = "<img src="+ img +">";
-    scoreDiv.innerHTML += "<p>"+ scorePerCent +"%</p>";
+    const percentRight = Math.round(100 * score/questions.length);
+    scoreDiv.innerHTML += "<p>"+ percentRight +"%</p>";
 }
