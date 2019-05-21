@@ -7,12 +7,12 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 30%;
     margin-bottom: 50px;
 }
 #container{
     margin : 20px auto;
-    height: 450px;
+    height: 650px;
     width : 700px;
     border-radius: 5px;
     box-shadow: 0px 5px 15px 0px;
@@ -66,5 +66,20 @@ p {
 }
 
 #question {
+    text-align: center;
+}
+
+#scoreContainer {
+    display: block;
+    text-align: center;
+}
+
+#timer-title{
+    display: block;
+    text-align: center;
+}
+
+#counter {
+    display: block;
     text-align: center;
 }

@@ -8,7 +8,6 @@ const choiceB = document.getElementById("B");
 const choiceC = document.getElementById("C");
 const choiceD = document.getElementById("D");
 const counter = document.getElementById("counter");
-const timeGauge = document.getElementById("timeGauge");
 const progress = document.getElementById("progress");
 const scoreDiv = document.getElementById("scoreContainer");
 
@@ -48,8 +47,6 @@ const lastQuestion = questions.length - 1;
 let runningQuestion = 0;
 let count = 10;
 const questionTime = 0; // 10s
-const gaugeWidth = 150; // 150px
-const gaugeUnit = gaugeWidth / questionTime;
 let TIMER;
 let score = 0;
 
@@ -89,7 +86,6 @@ function renderProgress(){
 function renderCounter(){
     if (count >= questionTime){
         counter.innerHTML = count;
-        timeGauge.style.width = count * gaugeUnit + "px";
         count--;
     } else {
         count = 10;
@@ -117,7 +113,7 @@ function checkAnswer(answer){
         // change progress color to red
         answerIsWrong();
     }
-    count = 0;
+    count = 10;
     if(runningQuestion < lastQuestion){
         runningQuestion++;
         renderQuestion();
