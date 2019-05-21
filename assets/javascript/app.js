@@ -86,18 +86,18 @@ function renderProgress(){
 // counter render
 
 function renderCounter(){
-    if(count <= questionTime){
+    if (count <= questionTime){
         counter.innerHTML = count;
         timeGauge.style.width = count * gaugeUnit + "px";
         count++
-    }else{
+    } else {
         count = 0;
         // change progress color to red
         answerIsWrong();
-        if(runningQuestion < lastQuestion){
+        if (runningQuestion < lastQuestion){
             runningQuestion++;
             renderQuestion();
-        }else{
+        } else {
             // end the quiz and show the score
             clearInterval(TIMER);
             scoreRender();

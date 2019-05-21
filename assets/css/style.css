@@ -48,3 +48,15 @@ body {
     height : 200px;
     border-top-left-radius: 5px;
 }
+
+p {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 50px;
+}
+
+#choices {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+}
