@@ -1,6 +1,7 @@
 body {
     font-family: 'Korinna BT';
     text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+    background-color: #060CE9;
 }
 
 #logo {
@@ -10,11 +11,11 @@ body {
     width: 30%;
     margin-bottom: 50px;
 }
-#container{
+#container {
     margin : 20px auto;
-    height: 650px;
+    height: 550px;
     width : 700px;
-    border-radius: 5px;
+    border-radius: 50px;
     box-shadow: 0px 5px 15px 0px;
     position: relative;
     background-color: #060CE9;
@@ -34,7 +35,7 @@ body {
     top:500px;
 }
 
-#qImg{
+#question-image {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -43,7 +44,7 @@ body {
     left : 0px;
     top : 0px;
 }
-#qImg img{
+#question-image img {
     width : 200px;
     height : 200px;
     border-top-left-radius: 5px;
@@ -74,7 +75,7 @@ p {
     text-align: center;
 }
 
-#timer-title{
+#timer-title {
     display: block;
     text-align: center;
 }
