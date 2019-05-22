@@ -37,7 +37,61 @@ let questions = [
         choiceC : "Gazpacho",
         choiceD : "Avocado",
         correct : "C"
-    }
+    },
+
+    {   question : "IN 1967, SURGEON CHRISTIAAN BARNARD PERFORMED THE FIRST HUMAN HEART TRANSPLANT IN THIS AFRICAN COUNTRY",
+        imageSource : "assets/images/southafrica.jpeg",
+        choiceA : "Egypt",
+        choiceB : "South Aftrica",
+        choiceC : "Kenya",
+        choiceD : "Algeria",
+        correct : "B"
+    },
+
+    {   question : "IN 1985, ARKANSAS ADOPTED THIS INSTRUMENT AS ITS STATE MUSICAL INSTRUMENT",
+        imageSource : "assets/images/instruments.jpg",
+        choiceA : "Saxaphone",
+        choiceB : "Trumpet",
+        choiceC : "Fiddle",
+        choiceD : "Piano",
+        correct : "C"
+    },
+
+    {   question : "IT'S THE AREA ABOVE A NATIONAL TERRITORY THAT BELONGS TO THAT COUNTRY",
+        imageSource : "assets/images/aerospace.jpg",
+        choiceA : "Aerospace",
+        choiceB : "The sky",
+        choiceC : "Air",
+        choiceD : "Water",
+        correct : "A"
+    },
+
+    {   question : "IN MANY U.S. STATES, THIS TREE PLANTING HOLIDAY IS OBSERVED ON THE LAST FRIDAY IN APRIL",
+        imageSource : "assets/images/arborday.png",
+        choiceA : "Humanity Day",
+        choiceB : "Tree Day",
+        choiceC : "Earth Day",
+        choiceD : "Arbor Day",
+        correct : "D"
+    },
+
+    {   question : "KITES ARE FLOWN ON MAKAR SANKRANTI, A HOLIDAY ON THE CALENDAR OF THIS RELIGION",
+        imageSource : "assets/images/kites.png",
+        choiceA : "Hinduism",
+        choiceB : "Buddhism",
+        choiceC : "Christianity",
+        choiceD : "Islam",
+        correct : "A"
+    },
+
+    {   question : "SHE WROTE THE BOOK THAT WAS ADAPTED INTO THE FILM MARY POPPINS",
+        imageSource : "assets/images/mary_poppins.jpg",
+        choiceA : "Agatha Christie",
+        choiceB : "P. L. Travers",
+        choiceC : "J. K. Rowling",
+        choiceD : "I wrote it!",
+        correct : "B"
+    },
 ];
 
 const lastQuestion = questions.length - 1;
